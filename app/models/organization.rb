@@ -21,12 +21,3 @@ class Organization < ActiveRecord::Base
   end  
 
 end
-
-
-    #        :name => :string,
-    # :description => :text,
-    #     :revenue => :integer,
-    #      :street => :string,
-    #        :city => :string,
-    #    :province => :string,
-    #     :country => :string,
