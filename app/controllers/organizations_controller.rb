@@ -5,7 +5,8 @@ class OrganizationsController < ApplicationController
   end
 
   def submit_query
-    
+    render text: params
+    # {"myName"=>"myValue", "controller"=>"organizations", "action"=>"submit_query"}
   end
 
 end
