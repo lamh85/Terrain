@@ -2,7 +2,7 @@
 
 <form ng-controller="FormController" action="/submit_query" method="GET">
 
-  <div ng-repeat="number in FilterNumbers">
+  <div ng-repeat="number in filterNumbers">
     
     <label for="property{{number}}">Property</label>
     <input name="property{{number}}">
@@ -15,7 +15,7 @@
   </div>
 
 
-  <button>Add more filters!!!</button>
+  <button ng-click="pushFilterNumbers()">Add more filters!!!</button>
   <input type="submit">
 
 </form>

@@ -1,9 +1,17 @@
-(function(){
+// (function(){
 
-  var app = angular.module("Terrain", ['ng-rails-csrf']);
+  myApp = angular.module("Terrain", ['ng-rails-csrf']);
 
-  FormController = app.controller("FormController", ['$scope', function($scope) {
+  FormController = myApp.controller("FormController", ['$scope', function($scope) {
     $scope.filterNumbers = [1];
-  }])
 
-})(); // End whole file's closure
+    $scope.pushFilterNumbers = function(){
+      event.preventDefault();
+      $scope.filterNumbers.push( $scope.filterNumbers.length+1 );
+      console.log("hello world" +$scope.filterNumbers);
+    };
+
+
+  }]);
+
+// })(); // End whole file's closure

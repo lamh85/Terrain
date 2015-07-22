@@ -1,5 +1,16 @@
 source 'https://rubygems.org'
 
+# MY ADDITIONS
+# ############
+
+gem 'simple_form'
+gem 'bootstrap-sass'
+gem 'jquery-turbolinks'
+gem 'angular-rails-templates'
+gem 'ng-rails-csrf'
+
+# RAILS DEFAULTS
+# ##############
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

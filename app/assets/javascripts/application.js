@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require bootstrap-sprockets
+//= require ng-rails-csrf
+//= angular-rails-templates
+
+
+// Commented out:
+// require turbolinks
+// require angular-turbolinks
+// require_tree .
