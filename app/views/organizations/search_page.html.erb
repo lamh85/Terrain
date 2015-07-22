@@ -1,15 +1,21 @@
 <h1>Give me some search, yo!</h1>
 
-<form action="/submit_query" method="GET">
+<form ng-controller="FormController" action="/submit_query" method="GET">
 
-<label for="property">Property</label>
-<input name="property">
+  <div ng-repeat="number in FilterNumbers">
+    
+    <label for="property{{number}}">Property</label>
+    <input name="property{{number}}">
+    <p>
 
-<p>
-<label for="keyword">Keyword</label>
-<input name="keyword">
+    <label for="keyword{{number}}">Keyword</label>
+    <input name="keyword{{number}}">
+    <p>
 
-<button>Add more filters!!!</button>
-<input type="submit">
+  </div>
+
+
+  <button>Add more filters!!!</button>
+  <input type="submit">
 
 </form>
