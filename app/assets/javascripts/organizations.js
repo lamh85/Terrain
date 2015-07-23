@@ -4,6 +4,7 @@
 
   FormController = myApp.controller("FormController", ['$scope', function($scope) {
     $scope.filterNumbers = [1];
+    $scope.preview;
 
     $scope.pushFilterNumbers = function(){
       event.preventDefault();

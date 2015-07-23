@@ -4,16 +4,17 @@
 
   <div ng-repeat="number in filterNumbers">
     
-    <label for="property{{number}}">Property</label>
-    <input name="property{{number}}">
+    <label for="query[{{number}}].property">Property</label>
+    <input name="query[{{number}}].property">
     <p>
 
-    <label for="keyword{{number}}">Keyword</label>
-    <input name="keyword{{number}}">
+    <label for="query[{{number}}].keyword">Keyword</label>
+    <input name="query[{{number}}].keyword">
     <p>
 
   </div>
 
+  <div>{{query}}</div>
 
   <button ng-click="pushFilterNumbers()">Add more filters!!!</button>
   <input type="submit">
