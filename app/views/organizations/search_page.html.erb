@@ -2,7 +2,7 @@
 
 <form ng-controller="FormController" action="/submit_query" method="GET">
 
-  <div ng-repeat="number in filterNumbers" class="row">
+  <div ng-repeat="number in filterNumbers" class="row filter-set-{{number}}">
 
     <div class="col-md-1 col-lg-1">
       {{number}}
@@ -16,6 +16,10 @@
     <div class="col-md-3 col-lg-3 form-group">
       <label for="query[{{number}}].keyword">Keyword</label>
       <input name="query[{{number}}].keyword" class="form-control">
+    </div>
+
+    <div class="col-md-3 col-lg-3">
+      <button ng-click="removeFilter()">Remove this filter</button>
     </div>
 
     <div class="clearfix"></div>
