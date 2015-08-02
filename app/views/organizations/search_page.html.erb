@@ -2,21 +2,33 @@
 
 <form ng-controller="FormController" action="/submit_query" method="GET">
 
-  <div ng-repeat="number in filterNumbers">
-    
-    <label for="query[{{number}}].property">Property</label>
-    <input name="query[{{number}}].property">
-    <p>
+  <div ng-repeat="number in filterNumbers" class="row">
 
-    <label for="query[{{number}}].keyword">Keyword</label>
-    <input name="query[{{number}}].keyword">
-    <p>
+    <div class="col-md-1 col-lg-1">
+      {{number}}
+    </div>
+
+    <div class="col-md-3 col-lg-3 form-group">
+      <label for="query[{{number}}].property">Property</label>
+      <input name="query[{{number}}].property" class="form-control">
+    </div>
+
+    <div class="col-md-3 col-lg-3 form-group">
+      <label for="query[{{number}}].keyword">Keyword</label>
+      <input name="query[{{number}}].keyword" class="form-control">
+    </div>
+
+    <div class="clearfix"></div>
+
+    <!-- <div class="col-md-2 col-lg-2"> -->
+    <!-- </div> -->
 
   </div>
+  
+  <button ng-click="pushFilterNumbers()">Add more filters!!!</button>
 
   <div>{{query}}</div>
 
-  <button ng-click="pushFilterNumbers()">Add more filters!!!</button>
   <input type="submit">
 
 </form>
